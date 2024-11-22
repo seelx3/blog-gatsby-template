@@ -109,11 +109,15 @@
 <h2>開発手順</h2>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">yarn // パッケージインストール
 yarn develop // 開発サーバー起動
-yarn deploy // デプロイ</code></pre></div>
+yarn deploy -prefix-paths // デプロイ</code></pre></div>
+<ul>
+<li>deploy コマンドで、gh-pages にデプロイされます。</li>
+<li>ブログ中などで画像を適切に参照するために、<code class="language-text">gatsby-config.js</code> の <code class="language-text">pathPrefix</code> を設定を行い、<code class="language-text">deploy</code> コマンド実行時に <code class="language-text">-prefix-paths</code> オプションを付与してください。</li>
+</ul>
 <h2>ブログの追加</h2>
 <ul>
 <li><code class="language-text">/content/blog</code> 以下にディレクトリを作成し、その中に <code class="language-text">index.md</code> を作成してください。</li>
-<li>マークダウンで画像を使用する場合は、同じディレクトリに画像を配置して参照できます。</li>
+<li>マークダウンで画像を使用する場合は、以下の画像のように同じディレクトリに画像を配置して参照できます。</li>
 </ul>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -121,7 +125,7 @@ yarn deploy // デプロイ</code></pre></div>
     >
       <a
     class="gatsby-resp-image-link"
-    href="/blog-gatsby-template/static/7cc3cfb6d9c8e43615af15708b9b3689/e17e5/seel-400x400.png"
+    href="/static/7cc3cfb6d9c8e43615af15708b9b3689/e17e5/seel-400x400.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -134,10 +138,10 @@ yarn deploy // デプロイ</code></pre></div>
         class="gatsby-resp-image-image"
         alt="seel 400x400"
         title=""
-        src="/blog-gatsby-template/static/7cc3cfb6d9c8e43615af15708b9b3689/e17e5/seel-400x400.png"
-        srcset="/blog-gatsby-template/static/7cc3cfb6d9c8e43615af15708b9b3689/c26ae/seel-400x400.png 158w,
-/blog-gatsby-template/static/7cc3cfb6d9c8e43615af15708b9b3689/6bdcf/seel-400x400.png 315w,
-/blog-gatsby-template/static/7cc3cfb6d9c8e43615af15708b9b3689/e17e5/seel-400x400.png 400w"
+        src="/static/7cc3cfb6d9c8e43615af15708b9b3689/e17e5/seel-400x400.png"
+        srcset="/static/7cc3cfb6d9c8e43615af15708b9b3689/c26ae/seel-400x400.png 158w,
+/static/7cc3cfb6d9c8e43615af15708b9b3689/6bdcf/seel-400x400.png 315w,
+/static/7cc3cfb6d9c8e43615af15708b9b3689/e17e5/seel-400x400.png 400w"
         sizes="(max-width: 400px) 100vw, 400px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -146,6 +150,9 @@ yarn deploy // デプロイ</code></pre></div>
   </a>
     </span></p>
 <h2>マークダウン中で外部リンクをカード表示</h2>
+<ul>
+<li>次のように記述すると、外部リンクをカード表示できます。</li>
+</ul>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">// blank
 https://github.com/seelx3/blog-gatsby-template
 // blank</code></pre></div>
@@ -153,7 +160,12 @@ https://github.com/seelx3/blog-gatsby-template
 <ul>
 <li>使用したプラグイン</li>
 </ul>
-<p><div class="gatsby-remark-link-card__container"><a class="gatsby-remark-link-card__link" href="https://github.com/okaryo/gatsby-remark-link-card" rel="noreferrer noopener" target="_blank"><div class="gatsby-remark-link-card__main"><div class="gatsby-remark-link-card__content"><div class="gatsby-remark-link-card__title">GitHub - okaryo/gatsby-remark-link-card: Gatsby Remark plugin to embed link card</div><div class="gatsby-remark-link-card__description">Gatsby Remark plugin to embed link card. Contribute to okaryo/gatsby-remark-link-card development by creating an account on GitHub.</div></div><div class="gatsby-remark-link-card__meta"><img class="gatsby-remark-link-card__favicon" src="https://www.google.com/s2/favicons?domain=github.com&#x26;sz=14" width="14" height="14" alt="favicon"><span class="gatsby-remark-link-card__url">github.com</span></div></div><div class="gatsby-remark-link-card__thumbnail"><img src="https://opengraph.githubassets.com/e0742cb8b371d82004a67342b554d9ea3a5316739e0975ef7ac4b69ef94b496f/okaryo/gatsby-remark-link-card" class="gatsby-remark-link-card__image" alt="ogImage"></div></a></div></p></div></div></div></main><footer class="border-t p-4 text-center"><p class="text-sm text-gray-600">© <!-- -->2024<!-- --> <!-- -->seelx3</p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/how-to-use/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p><div class="gatsby-remark-link-card__container"><a class="gatsby-remark-link-card__link" href="https://github.com/okaryo/gatsby-remark-link-card" rel="noreferrer noopener" target="_blank"><div class="gatsby-remark-link-card__main"><div class="gatsby-remark-link-card__content"><div class="gatsby-remark-link-card__title">GitHub - okaryo/gatsby-remark-link-card: Gatsby Remark plugin to embed link card</div><div class="gatsby-remark-link-card__description">Gatsby Remark plugin to embed link card. Contribute to okaryo/gatsby-remark-link-card development by creating an account on GitHub.</div></div><div class="gatsby-remark-link-card__meta"><img class="gatsby-remark-link-card__favicon" src="https://www.google.com/s2/favicons?domain=github.com&#x26;sz=14" width="14" height="14" alt="favicon"><span class="gatsby-remark-link-card__url">github.com</span></div></div><div class="gatsby-remark-link-card__thumbnail"><img src="https://opengraph.githubassets.com/e0742cb8b371d82004a67342b554d9ea3a5316739e0975ef7ac4b69ef94b496f/okaryo/gatsby-remark-link-card" class="gatsby-remark-link-card__image" alt="ogImage"></div></a></div></p>
+<h2>マークダウンのスタイル</h2>
+<ul>
+<li>使用した Markdown Style CSS</li>
+</ul>
+<p><div class="gatsby-remark-link-card__container"><a class="gatsby-remark-link-card__link" href="https://github.com/sindresorhus/github-markdown-css" rel="noreferrer noopener" target="_blank"><div class="gatsby-remark-link-card__main"><div class="gatsby-remark-link-card__content"><div class="gatsby-remark-link-card__title">GitHub - sindresorhus/github-markdown-css: The minimal amount of CSS to replicate the GitHub Markdown style</div><div class="gatsby-remark-link-card__description">The minimal amount of CSS to replicate the GitHub Markdown style - sindresorhus/github-markdown-css</div></div><div class="gatsby-remark-link-card__meta"><img class="gatsby-remark-link-card__favicon" src="https://www.google.com/s2/favicons?domain=github.com&#x26;sz=14" width="14" height="14" alt="favicon"><span class="gatsby-remark-link-card__url">github.com</span></div></div><div class="gatsby-remark-link-card__thumbnail"><img src="https://opengraph.githubassets.com/727d3143ad1159147ea7aaa3d5efd9546ddc1c04e79a2dd652b491267dbd2b5d/sindresorhus/github-markdown-css" class="gatsby-remark-link-card__image" alt="ogImage"></div></a></div></p></div></div></div></main><footer class="border-t p-4 text-center"><p class="text-sm text-gray-600">© <!-- -->2024<!-- --> <!-- -->seelx3</p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/how-to-use/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
