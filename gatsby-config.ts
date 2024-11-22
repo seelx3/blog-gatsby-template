@@ -1,7 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
-  pathPrefix: "/blog-gatsby-template",
+  pathPrefix: `/blog-gatsby-template`,
   siteMetadata: {
     author: `seelx3`,
     title: `simple blog`,
