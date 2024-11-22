@@ -24,4 +24,20 @@ yarn deploy // デプロイ
 ## ブログの追加
 
 - `/content/blog` 以下にディレクトリを作成し、その中に `index.md` を作成してください。
-- マークダウンで画像を使用する場合は、同じディレクトリに画像を配置して参照することもできます。
+- マークダウンで画像を使用する場合は、同じディレクトリに画像を配置して参照できます。
+
+![](./seel-400x400.png)
+
+## マークダウン中で外部リンクをカード表示
+
+```
+// blank
+https://github.com/seelx3/blog-gatsby-template
+// blank
+```
+
+https://github.com/seelx3/blog-gatsby-template
+
+- 使用したプラグイン
+
+https://github.com/okaryo/gatsby-remark-link-card
