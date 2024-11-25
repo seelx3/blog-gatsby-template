@@ -18,7 +18,7 @@ asdf install // nodejs, yarn のバージョン指定
 ```
 yarn // パッケージインストール
 yarn develop // 開発サーバー起動
-yarn deploy -prefix-paths // デプロイ
+yarn deploy  // デプロイ
 ```
 
 - deploy コマンドで、gh-pages にデプロイされます。
