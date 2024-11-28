@@ -20,6 +20,7 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({ data }) => {
                       <img
                         src={post.frontmatter?.thumbnailUrl}
                         className="w-full h-full object-cover"
+                        alt="thumbnail"
                       />
                     ) : (
                       <FaImage className="text-2xl text-gray-400" />
