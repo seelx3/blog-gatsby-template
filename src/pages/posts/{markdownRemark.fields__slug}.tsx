@@ -3,6 +3,19 @@ import { PageProps, HeadFC, graphql } from "gatsby";
 import { Layout } from "../../components/Layout";
 import "github-markdown-css/github-markdown-light.css";
 
+export const pageQuery = graphql`
+  query PostPage($id: String) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        date(formatString: "YYYY/MM/DD")
+        title
+        description
+      }
+    }
+  }
+`;
+
 const PostPage: React.FC<PageProps<Queries.PostPageQuery>> = ({ data }) => {
   return (
     <Layout>
@@ -25,19 +38,6 @@ const PostPage: React.FC<PageProps<Queries.PostPageQuery>> = ({ data }) => {
 };
 
 export default PostPage;
-
-export const pageQuery = graphql`
-  query PostPage($id: String) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        date(formatString: "YYYY/MM/DD")
-        title
-        description
-      }
-    }
-  }
-`;
 
 export const Head: HeadFC<Queries.PostPageQuery> = ({ data }) => (
   <title>{data.markdownRemark?.frontmatter?.title}</title>
