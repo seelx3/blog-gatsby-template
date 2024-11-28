@@ -18,3 +18,7 @@ yarn // パッケージインストール
 yarn develop // 開発サーバー起動
 yarn deploy // デプロイ
 ```
+
+## 参考
+
+- [Gatsby でブログ作成](https://seelx3.com/blog/posts/20241128-blog/)
